@@ -1,0 +1,114 @@
+
+:root{
+    --root-padding-vertical: clamp(0px, calc(100vw - 640px), 128px);
+    --root-padding-horizontal: clamp(0px, calc(100vw - 720px), 48px);
+    --article-padding: clamp(0px, calc(100vw - 728px), 40px);
+    --article-width : min(100%, clamp(616px, 55vw, 736px));
+}
+#root{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--stone-100);
+    padding: var(--root-padding-vertical)  var(--root-padding-horizontal);
+}
+article{
+    width: var(--article-width) ;
+    background-color: var(--white);
+    padding: var(--article-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: min(24px, calc(100vw - 616px));
+    gap: 40px;
+}
+.all{
+    padding: 0px min(32px, calc(40px - var(--article-padding)));
+    width: 100%;
+}
+img{
+    width: min(100%, clamp(536px, 50vw, 656px ));
+    border-radius:  min(12px, calc(100vw - 616px));
+}
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.preparation-time{
+    margin-top: 32px;
+    padding: 24px;
+    background-color: var(--rose-50);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.preparation-list{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 16px;
+}
+.descriptive-container > *{
+    display: inline;
+}
+
+section{
+    margin: 32px 0px;
+}
+
+.section-ingredients{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.section-ingredients > ul {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 8px 16px;
+}
+.section-ingredients > ul > li{
+    display: inline;
+}
+
+.section-instructions{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.section-instructions > ol{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.section-instructions > ol > li  {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 16px;
+}
+dl > dt, dl > dd{
+    display: inline;
+}
+
+.section-nutrition {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+tbody{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+tr{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px var(--stone-100) solid;
+    padding-bottom: 12px;
+}
+tr > *{
+    text-align: start;
+}
+
